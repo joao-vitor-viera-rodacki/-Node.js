@@ -1,0 +1,18 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+    <p>{{titulo}}</p>
+    <P>{{ saudacao() }}</P>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vuejs 2!' //setando pelo js em vez de setar pelo html
+        },
+        methods: {
+            saudacao: function() {
+                return "boa semana"
+            }
+        }
+    })
+</script>

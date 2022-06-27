@@ -1,0 +1,45 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="add">
+    <p v-once>Valor padrao para idade {{idade}}</p>
+    <hr>
+    <input type="number" v-on:input="alteraIdade"s>
+    <p>{{ nome }} meu nome e minha idade {{ idade }}</p>
+    <hr>
+    <p>um numero randomico </p>
+    <p>{{ numeroAletorio() }}</p>
+    <hr>
+    <img v-bind:src="linkImagem" alt="300">
+    <hr>
+    <input type="text" v-bind:value="nome">
+</div> 
+    <hr>
+<script>
+    new Vue ({
+        el :  '#add',
+        data:{
+            idade : 12 ,
+            nome : 'Joao',
+            randomNumber : null,
+            linkImagem : "https://i1.sndcdn.com/avatars-000424332303-cag0qn-t240x240.jpg"
+        },
+        methods:{
+                numeroAletorio : function(event) {
+                     this.randomNumber = Math.random()
+                     return this.randomNumber
+                },
+                alteraIdade: function(event) {
+                    console.log(this)
+
+                    if (event.target.value == 0){
+                        this.idade = 12;
+                    }
+                    else {
+                        this.idade = this.idade * event.target.value;
+                    }
+
+                    return this.idade
+            }
+          }
+       })
+</script>
