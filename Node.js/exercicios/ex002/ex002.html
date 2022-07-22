@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+    <input type="text" v-on:input="MudaMsg">
+    <button v-on:click="alerta(msg)" >Aperta para ver Msg</button>
+    <input typer='text' v-on:keyup.enter="sensor(teclada)"></input>
+    <p>{{teclada}}</p>
+</div>
+<script>
+    new Vue ({
+        el : '#app',
+        data : {
+            msg : '',
+            teclada : ''
+        },
+        methods : {
+            alerta(msg) {
+                alert(`Sua menssgem : ${msg}`)
+            },
+            MudaMsg(event) {
+                this.msg = event.target.value
+            },
+            sensor(sensor) {
+                this.teclada = event.target.value
+            }
+        }
+    })
+</script>
