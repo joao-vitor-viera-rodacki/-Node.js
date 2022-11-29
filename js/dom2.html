@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando atravez da DOM</title>
+</head>
+<body>
+    <input type="number" name="n1" id="n1">
+    <input type="number" name="n2" id="n2">
+    <input type="button" id="somar" value="Somar" onclick="soma()">
+    <input type="button" id="subtrair" value="Subtrair" onclick="subtrair()">
+    
+    <div id="resposta">Aguardando soma ....</div>
+    
+    <script>
+        var get_n1 = window.document.getElementById("n1")
+        var get_n2 = window.document.getElementById("n2")
+        var get_resposta = window.document.getElementById("resposta")
+        
+        function soma(){
+            console.log(get_n1)
+            var num_n1 = Number(get_n1.value) 
+            var num_n2 = Number(get_n2.value)
+
+            var somar = num_n1 + num_n2
+            console.log(soma)
+            get_resposta.innerHTML = `A soma total ${somar}`
+        }
+        function subtrair(){
+
+            var num_n1 = Number(get_n1.value) 
+            var num_n2 = Number(get_n2.value)
+            
+            var subtrair = num_n1 - num_n2
+            get_resposta.innerHTML = `A soma total ${subtrair}`
+        }
+
+    </script>
+</body>
+</html>
