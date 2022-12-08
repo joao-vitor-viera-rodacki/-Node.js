@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#texto {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: aqua;
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="texto" onclick="clicar()" onmouseenter="entrou()" onmouseout="sair()"> -->
+        <div id="texto">
+       
+        Intereja....
+
+    </div>
+
+    <script>
+        var cli = window.document.getElementById("texto")
+        cli.addEventListener("click",clicar)
+        cli.addEventListener("mouseenter",entrou)
+        cli.addEventListener("mouseout",sair)
+        
+        function clicar(){
+            cli.innerText = "Clicou"
+        }
+
+        function entrou(){
+            cli.innerText = "entrou"
+
+        }
+        function sair(){
+            cli.innerText = "saio"
+        }
+
+    </script>
+</body>
+</html>
