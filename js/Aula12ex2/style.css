@@ -1,23 +1,27 @@
 body{
-    background: rgb(37, 37, 239);
+    background-color: aqua;
     font: normal 15pt Arial;
 }
 header{
-    color: rgb(0, 0, 0);
+    color: aliceblue;
     text-align: center;
 }
-
+h1#ti{
+    color: black;
+}
 section{
     background: white;
     border-radius: 10px;
     padding: 15px;
     width: 500px;
     margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.674);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.674); 
 }
 footer{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     text-align: center;
-    font-style: italic;
-
+    font-style: normal;
+}
+img {
+    margin-left: 100px;
 }
