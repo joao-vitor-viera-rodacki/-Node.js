@@ -27,14 +27,12 @@ function verifica_entrada(size ,value){
 function verifica_idade(){
     ida = idade_ano.value
     size = idade_ano.value.length
-    console.log(ida,size)
     veri = verifica_entrada(size,ida)
 
     if(veri){
         if (sex[0].checked == true){
             
             var idade = verifica_sexo(ida,"homem")
-            
             res.innerHTML = `<p>homem idade ${idade}</p>`
         
 
@@ -49,7 +47,6 @@ function verifica_idade(){
 
 function verifica_sexo(ida_ano,sexo){
     idade =   ano - ida_ano
-    console.log(idade)
     if (idade <= 12 && idade > 0){
         if (sexo == "homem"){
             img.src = "img/menino.jpg"
