@@ -7,7 +7,8 @@ var tell = window.document.getElementById("contar")
 tell.addEventListener("click",tellFunction)
 
 function tellFunction(){
-    for(num = start.value ;num >= end.value ; num + phases.value ){
-        console.log(num)
+    result.innerHTML = ``
+     for(num = Number(start.value) ;num <= Number(end.value) ; num += Number(phases.value) ){
+        result.innerHTML += `<p>  Numero ${num} </p>` 
     }
-}
+}    
