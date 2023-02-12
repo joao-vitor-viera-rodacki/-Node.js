@@ -7,8 +7,21 @@ var tell = window.document.getElementById("contar")
 tell.addEventListener("click",tellFunction)
 
 function tellFunction(){
-    result.innerHTML = ``
-     for(num = Number(start.value) ;num <= Number(end.value) ; num += Number(phases.value) ){
-        result.innerHTML += `<p>  Numero ${num} </p>` 
-    }
+    if(start.value.length == 0 || end.value.length == 0 || phases.value.length == 0){
+        result.innerHTML = "impossivel contar"
+    }else{
+        if(phases.value == 0 ){
+            window.alert("Passo foi mudado para 1")
+            phases.value = 1
+        }
+        result.innerHTML = "Contando <br>"
+        if(start.value > end.value){
+            for(var num = Number(start.value) ;num >= Number(end.value) ; num -= Number(phases.value) ){
+                result.innerHTML += ` ${num} `
+            } 
+        }else{
+            for(var num = Number(start.value) ;num <= Number(end.value) ; num += Number(phases.value) ){
+                result.innerHTML += ` ${num} ` 
+            }
+            }}
 }    
